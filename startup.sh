@@ -7,7 +7,7 @@ if [ ! -f /home/jupyterlab/.jupyter/jupyter_server_config.py ] ; then
 fi
 
 if [ -n "$TLS_CERTIFICATE_PATH" ]; then
-    jupyter-lab --ip 0.0.0.0 --no-browser --port 443 --certfile="$TLS_CERTIFICATE_PATH" --keyfile="$TLS_KEY_PATH"
+    jupyter-lab --ip 0.0.0.0 --no-browser --certfile="$TLS_CERTIFICATE_PATH" --keyfile="$TLS_KEY_PATH"
 else
     jupyter-lab --ip 0.0.0.0 --no-browser
 fi
